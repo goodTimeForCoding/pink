@@ -1,0 +1,49 @@
+.posts {
+  &__title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    min-width: 280px;
+
+    @media (min-width: @tablet-width) {
+      width: 300px;
+      margin-right: 20px;
+    }
+  }
+
+  .posts__item:nth-child(2n) {
+    @media (min-width: @tablet-width) {
+      margin-right: 0;
+    }
+
+    @media (min-width: 1000px) {
+      margin-right: 20px;
+    }
+  }
+
+  .posts__item:nth-child(3n) {
+    @media (min-width: 1000px) {
+      margin-right: 0;
+    }
+  }
+
+  &__better {
+    margin-bottom: 20px;
+  }
+
+  &__list-wrap {
+    @media (min-width: @tablet-width) {
+      margin-right: auto;
+      margin-left: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 940px;
+    }
+  }
+}

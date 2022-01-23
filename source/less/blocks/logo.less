@@ -1,0 +1,51 @@
+.logo {
+  &__mobile {
+    &:hover {
+      fill: @pink;
+    }
+
+    &:active {
+      fill: fade(@pink, 30%);
+    }
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &__tablet {
+    display: none;
+
+    &:hover {
+      fill: @pink;
+    }
+
+    &:active {
+      fill: fade(@pink, 30%);
+    }
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+
+  &__desktop {
+    display: none;
+
+    &:hover {
+      fill: @pink;
+    }
+
+    &:active {
+      fill: fade(#ffffff, 30%);
+    }
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
+}

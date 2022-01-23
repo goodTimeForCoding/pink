@@ -1,0 +1,87 @@
+.effect {
+  display: none;
+
+  &__text {
+    margin-right: 3%;
+    margin-left: 10%;
+    align-self: center;
+    width: 50%;
+    max-width: 490px;
+
+    @media (min-width: @desktop-width) {
+      margin-right: 15%;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    padding-top: 54px;
+
+    &__content-position {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__timer-desktop {
+      display: none;
+    }
+
+    &__timer-tablet {
+      display: block;
+      margin-left: 5%;
+      width: 238px;
+      height: 276px;
+    }
+
+    &__head {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 36px;
+      white-space: pre;
+      color: #000000;
+
+      @media (min-width: @desktop-width) {
+        white-space: normal;
+      }
+    }
+
+    &__paragraph {
+      margin-top: 24px;
+      margin-bottom: 24px;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+
+      @media (min-width: @desktop-width) {
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+
+    &__link {
+      margin-top: 0;
+      margin-bottom: 0;
+      color: @pink;
+      text-decoration: underline;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+    padding-bottom: 67px;
+    background-color: @lightgrey;
+
+    &__timer-desktop {
+      display: block;
+      margin-left: 15%;
+      width: 298px;
+      height: 345px;
+    }
+
+    &__timer-tablet {
+      display: none;
+    }
+  }
+}

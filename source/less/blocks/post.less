@@ -1,0 +1,131 @@
+.post {
+  &__img-better {
+    width: 100%;
+    height: auto;
+  }
+
+  &__title-img {
+    position: relative;
+    width: 0;
+    height: 0;
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 140px;
+      height: 36px;
+      background-image: url("../img/panorama-day-text.svg");
+      background-repeat: no-repeat;
+      right: 20px;
+
+      @media (min-width: @desktop-width) {
+        right: 130px;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    margin-bottom: -5px;
+  }
+
+  &__blockquote {
+    margin: 0;
+    .offsetPadding (8%; 3%; 8%; 6%);
+    background-color: @lightgrey;
+
+    @media (min-width: @tablet-width) {
+      .offsetPadding (30px; 30px; 30px; 30px);
+      min-height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &__blockquote--margin {
+      margin-bottom: 50px;
+    }
+
+    &__blockquote-wrap {
+      max-width: 880px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+
+  &__autor-name {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+
+    &--order {
+      order: -2;
+      margin-right: auto;
+    }
+  }
+
+  &__autor-time {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 24px;
+  }
+
+  &__text {
+    font-weight: normal;
+    line-height: 24px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 0;
+      margin-bottom: auto;
+
+      &--better {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__likes {
+    position: relative;
+    padding-left: 31px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 24px;
+    color: @pink;
+    text-transform: uppercase;
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 14px;
+      height: 13px;
+      background-image: url("../img/heart.svg");
+      background-repeat: no-repeat;
+      left: 0;
+      top: 5px;
+
+      @media (min-width: @tablet-width) {
+        left: 100px;
+      }
+    }
+
+    @media (min-width: @tablet-width) {
+      padding-left: 0;
+      margin-right: 31px;
+    }
+
+    &--order {
+      order: -1;
+      margin-left: auto;
+    }
+  }
+}

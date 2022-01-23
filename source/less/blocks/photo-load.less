@@ -1,0 +1,250 @@
+.photo-load {
+  max-width: 940px;
+  padding-bottom: 41px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: @lightgrey;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 57px;
+  }
+
+  &__wrap {
+    max-width: 940px;
+
+    @media (min-width: @tablet-width) {
+      margin-left: 8%;
+      margin-right: 6%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__settings {
+    padding-top: 20px;
+    text-align: center;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 57px;
+    }
+  }
+
+  &__post-container {
+    @media (min-width: @tablet-width) {
+      flex-direction: column;
+      margin-left: 47px;
+      align-self: flex-end;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 410px;
+    }
+  }
+
+  &__filters-container {
+    margin: 0 auto;
+    align-self: end;
+
+    @media (min-width: @tablet-width) {
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__filters {
+    margin: 0 auto;
+    margin-top: 41px;
+    margin-bottom: 34px;
+    max-width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (min-width: @tablet-width) {
+      margin: 0;
+      margin-left: auto;
+      margin-right: auto;
+      height: 216px;
+      flex-direction: column;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 70px;
+    }
+  }
+
+  &__filter {
+    display: inline-block;
+  }
+
+  &__scroll {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+
+    @media (min-width: @tablet-width) {
+      align-items: flex-end;
+    }
+  }
+
+  &__scroll-crop {
+    display: block;
+    text-align: center;
+    padding-bottom: 27px;
+
+    @media (min-width: @tablet-width) {
+      padding-bottom: 0;
+    }
+  }
+
+  &__scroll-fill {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+  }
+
+  &__scroll-contrast {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+  }
+
+
+  &__crop-icon {
+    @media (min-width: @tablet-width) {
+      width: 22px;
+      height: 22px;
+    }
+
+
+    @media (min-width: @desktop-width) {
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+
+  &__fill-icon {
+    @media (min-width: @tablet-width) {
+      width: 24px;
+      height: 22px;
+    }
+
+
+    @media (min-width: @desktop-width) {
+      width: 48px;
+      height: 43px;
+    }
+  }
+
+
+  &__contrast-icon {
+    @media (min-width: @tablet-width) {
+      width: 16px;
+      height: 16px;
+    }
+
+
+    @media (min-width: @desktop-width) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .photo-load__filter--active path {
+    fill: @pink;
+  }
+
+  &__icon path {
+    fill: fade(#283645, 30%);
+
+    @media (min-width: @tablet-width) {
+      fill: @pink;
+    }
+  }
+
+  &__icon:hover path {
+    fill: fade(#283645, 50%);
+  }
+
+  &__btn-container {
+    padding-top: 10px;
+    border-top: 1px solid #c4c4c4;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 20px;
+      width: 260px;
+      border-top: none;
+      align-self: end;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 0;
+      margin-top: 70px;
+      width: 410px;
+      display: flex;
+      align-items: baseline;
+    }
+  }
+
+  &__btn {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 280px;
+    height: 55px;
+    border-radius: 28px;
+    text-align: center;
+    background: 0 0;
+    font-size: 18px;
+    font-weight: 700;
+    outline: 0;
+    cursor: pointer;
+    overflow: hidden;
+
+    @media (min-width: @tablet-width) {
+      width: 260px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 183px;
+    }
+  }
+
+  &__btn-submit {
+    border: 3px solid @pink;
+    color: @pink;
+
+    &:hover {
+      color: white;
+      background-color: @pink;
+    }
+
+    &:active {
+      color: fade(white, 30%);
+    }
+  }
+
+  &__btn-cancel {
+    margin-top: 24px;
+    border: 3px solid rgba(40, 54, 69, 0.1);
+    color: rgba(40, 54, 69, 0.1);
+
+    &:hover {
+      color: fade(#283645, 30%);
+      border: 3px solid fade(#283645, 30%);
+    }
+
+    &:active {
+      border: none;
+      background-color: fade(#283645, 30%);
+      color: fade(white, 30%);
+    }
+  }
+}

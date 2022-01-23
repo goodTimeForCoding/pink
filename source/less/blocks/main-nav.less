@@ -1,0 +1,144 @@
+.main-nav {
+  &__wrapper {
+    @media (min-width: @desktop-width) {
+      width: 80%;
+      padding-left: 10%;
+      padding-right: 10%;
+      display: flex;
+      background-color: fade(#000000, 30%);
+    }
+  }
+
+  &__logo {
+    padding-left: 20px;
+  }
+
+  &__button-wrap {
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+
+  &__toggle {
+    padding: 0;
+    width: 90px;
+    height: 66px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+  }
+
+  &__header {
+    height: 66px;
+    background-color: fade(#000000, 30%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (min-width: @tablet-width) {
+      height: 110px;
+      position: relative;
+      top: 11px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 15%;
+      background-color: transparent;
+      top: -7px;
+    }
+
+    &--no-top {
+      top: 0;
+    }
+  }
+
+  &__burger-lines:hover {
+    fill: @pink;
+  }
+
+  &__burger-lines:active {
+    fill: fade(@pink, 30%);
+  }
+}
+
+.main-nav--closed {
+  & .site-navigation {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
+}
+
+.main-nav--opened {
+  & .site-navigation {
+    display: block;
+    position: absolute;
+    width: 100%;
+
+    @media (min-width: @desktop-width) {
+      position: static;
+    }
+  }
+
+  & .main-nav__header {
+    background-color: @darkgrey;
+    border-bottom: 1px solid #000000;
+
+    @media (min-width: @desktop-width) {
+      background-color: transparent;
+      border: none;
+    }
+  }
+
+  & .main-nav__burger-lines {
+    display: none;
+  }
+
+  & .main-nav__toggle::before,
+  & .main-nav__toggle::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    width: 31px;
+    height: 2px;
+    background-color: #ffffff;
+
+    @media (min-width: @tablet-width) {
+      top: 53px;
+    }
+  }
+
+  & .main-nav__toggle:hover::before,
+  & .main-nav__toggle:hover::after {
+    background-color: @pink;
+  }
+
+  & .main-nav__toggle:active::before,
+  & .main-nav__toggle:active::after {
+    background-color: fade(@pink, 30%);
+  }
+
+  & .main-nav__toggle::after {
+    transform: rotate(-45deg);
+  }
+
+  & .main-nav__toggle::before {
+    transform: rotate(45deg);
+  }
+}
+
+.main-nav--nojs {
+  & .site-navigation {
+    display: block;
+    position: static;
+    width: 100%;
+  }
+
+  & .main-nav__header {
+    background-color: @darkgrey;
+    border-bottom: 1px solid #000000;
+  }
+}

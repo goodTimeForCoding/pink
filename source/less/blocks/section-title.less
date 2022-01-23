@@ -1,0 +1,22 @@
+.section-title {
+  margin: 0;
+  .offsetPadding (54px; 5%; 60px; 5%);
+  font-size: 14px;
+
+  @media (min-width: @tablet-width) {
+    .offsetPadding (97px; 5%; 85px; 5%);
+    font-size: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .offsetPadding (100px; 5%; 97px; 5%);
+  }
+
+  &__bottom {
+    .offsetPadding (49px; 5%; 52px; 5%);
+    font-weight: normal;
+    line-height: 30px;
+    text-align: center;
+    background-color: white;
+  }
+}

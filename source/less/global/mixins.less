@@ -1,0 +1,37 @@
+.bg(@color) {
+  background-color: @color;
+}
+
+.font (@weight; @size; @lineHeight) {
+  font-weight: @weight;
+  font-size: @size;
+  line-height: @lineHeight;
+}
+
+.offsetPadding (@top; @right; @bottom; @left) {
+  padding-top: @top;
+  padding-right: @right;
+  padding-bottom: @bottom;
+  padding-left: @left;
+}
+
+.offsetMargin (@top; @right; @bottom; @left) {
+  margin-top: @top;
+  margin-right: @right;
+  margin-bottom: @bottom;
+  margin-left: @left;
+}
+
+.bgSpecial() {
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    border-top: 8vw solid transparent;
+    border-right: 100vw solid @lightgrey;
+    border-bottom: 0;
+    border-left: 0;
+    z-index: -1;
+  }
+}

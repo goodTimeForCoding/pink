@@ -1,0 +1,54 @@
+.social {
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    margin: 0;
+    margin-right: 14px;
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+
+
+  &__link {
+    display: block;
+    width: 48px;
+    height: 48px;
+    border: 3px solid #e9ebec;
+    border-radius: 50%;
+    background-position: 50% 50%;
+
+    &:hover {
+      border: 3px solid #283645;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &__link--vk {
+    background-image: url("../img/twitter.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__link--facebook {
+    background-image: url("../img/facebook.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__link--youtube {
+    background-image: url("../img/youtube.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

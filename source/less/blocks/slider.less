@@ -1,0 +1,108 @@
+.slider {
+  width: 280px;
+  margin: 0 auto;
+  overflow: hidden;
+
+
+  @media (min-width: @tablet-width) {
+    width: 620px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
+
+  & input[type="radio"] {
+    display: none;
+  }
+
+  &__list {
+    width: 300%;
+
+    @media (min-width: @desktop-width) {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &__list blockquote:nth-child(2),
+    &__list blockquote:nth-child(3) {
+      display: none;
+    }
+  }
+
+  &__item {
+    float: left;
+    width: 276px;
+
+    @media (min-width: @tablet-width) {
+      width: 620px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 80%;
+      float: none;
+    }
+  }
+
+  &__arrow {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      margin-top: 20px;
+      align-self: start;
+      display: block;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+
+  &__toggles {
+    text-align: center;
+  }
+
+  &__toggles label {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: content-box;
+    width: 6px;
+    height: 6px;
+    margin-right: 20px;
+    background: rgba(40, 54, 69, 0.3);
+    border-radius: 50%;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  &__btn-1:checked ~ .slider__toggles label[for="btn-1"],
+  &__btn-2:checked ~ .slider__toggles label[for="btn-2"],
+  &__btn-3:checked ~ .slider__toggles label[for="btn-3"],
+  &__btn-4:checked ~ .slider__toggles label[for="btn-4"],
+  &__btn-5:checked ~ .slider__toggles label[for="btn-5"],
+  &__btn-6:checked ~ .slider__toggles label[for="btn-6"] {
+    background: none;
+    border: 3px solid #283645;
+  }
+}
+
+.slider__btn-1:checked ~ .slider__list .slider__item {
+  transform: translate(0);
+}
+
+.slider__btn-2:checked ~ .slider__list .slider__item {
+  transform: translate(-280px);
+
+  @media (min-width: @tablet-width) {
+    transform: translate(-620px);
+  }
+}
+
+.slider__btn-3:checked ~ .slider__list .slider__item {
+  transform: translate(-560px);
+
+  @media (min-width: @tablet-width) {
+    transform: translate(-1240px);
+  }
+}
